@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HI</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so nguyen to</title>
+</head>
+<body>
+
+</body>
+</html>
+    <script>
+        let numbers=parseInt(prompt("Nhap mot so:"));
+        let count=1;
+        let N; //N la so nguyen to//
+        for (N=2;count<=numbers;N++) {
+            if (N === 2){
+                document.write('so nguyen to thu ' + count + ' : ' + N + '<br>')
+                count++;
+                continue
+            }
+            for (let i = 2; i < N; i++){
+                if(N % i === 0){
+                    break;
+                }
+                if (i === N - 1){
+                    document.write('so nguyen to thu ' + count + ' : ' + N +' <br>');
+                    count ++;
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
