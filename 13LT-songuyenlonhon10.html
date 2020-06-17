@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<script>
+   /*function inputArray(a){
+        let sizeArr;
+        do{
+            sizeArr=10;
+        }while(sizeArr<=0);
+
+        for(let i=0;i<sizeArr;i++){
+            a[i]=+prompt("Nhap phan tu thu "+i+" : ");
+            document.write(arr);
+        }
+    }
+
+
+    function Biggerthan10(a) {
+        let x=0;
+        for (let i=1;i<a.length;i++) {
+            if (a[i] >= 10) {
+                x++;
+                document.write(a[i] + "");
+            }
+        }return x;
+    }
+
+    let arr=new Array();
+    inputArray(arr);
+    document.write('<br> Các số >= 10 là: ' + '');
+    document.write("<br> Có " + Biggerthan10(arr) + " phần tử >= 10");*/
+   function inputArray(a){
+       let sizeArr;
+       do{
+           sizeArr= 10;
+       }while(sizeArr<=0);
+       for(let i=0;i<sizeArr;i++){
+           a[i]=prompt('Nhap so nguyen thu:' + i);
+       }
+   }
+   function displayArray(a){
+       for(i=0;i<a.length;i++){
+           document.write(a[i] +" ");
+       }
+   }
+   function bigThanTen(a){
+       let x = 0
+       for(i=0;i<a.length;i++){
+           if(a[i]>=10){
+               x++;
+               document.write(a[i] + " ");
+           }
+       } return x;
+   }
+   let arr=new Array();
+   inputArray(arr);
+   displayArray(arr);
+   document.write('<br> Các số >= 10 là: ');
+   document.write("<br> =>Có " + bigThanTen(arr) + " phần tử >= 10");
+
+
+
+
+</script>
+</body>
+</html>
