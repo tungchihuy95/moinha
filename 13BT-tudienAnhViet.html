@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu dien Anh Viet</title>
+</head>
+<body>
+    <input id="search" type="text"/>
+    <input id="" type="button" value="Tra cuu" onclick="timkiem();"/>
+    <div id="result"></div>
+<script>
+    let English= ["house","wall","money","love","Japanese"];
+    let Vietnamese= ["nhà","bức tường","tiền","tình yêu","tiếng Nhật/người Nhật"];
+    function timkiem() {
+        let tutracuu= document.getElementById('search').value;
+        for (let i=0;i<English.length;i++) {
+            if (English[i]==tutracuu) {
+                tutracuu=Vietnamese[i]
+                document.getElementById("result").innerHTML=tutracuu
+                break;
+            }else
+                document.getElementById("result").innerText='Khong tim thay ket qua!'
+        }
+    }
+</script>
+
+</body>
+</html>
