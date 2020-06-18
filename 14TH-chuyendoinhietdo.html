@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi nhiet do</title>
+</head>
+<body>
+<form>
+<p>
+    <label>Fahrenheit</label>
+    <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+           oninput="temperatureConverter(this.value)"
+           onchange="temperatureConverter(this.value)">
+
+    <!--placeholder: goi y , từ mà mình muốn hiển thị mờ mờ trong ô đó-->
+</p>
+<p>Celsius: <span id="outputCelsius"></span></p>
+</form>
+<script>
+
+    function temperatureConverter(aaaa) {
+        let valNum = parseFloat(aaaa);
+        document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
+    }
+/* ParseFloat: Cụ thể, nếu chuỗi truyền vào được bắt đầu bằng số
+nguyên hoặc một số thập phân, phương thức sẽ phân tích chuỗi và trả
+về số đó như một số( thuộc kiểu number) chứ không phải một chuỗi như ban đầu -->
+ */
+</script>
+</body>
+</html>
