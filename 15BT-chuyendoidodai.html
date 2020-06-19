@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi do dai</title>
+</head>
+<body>
+<form>
+    <p>
+        <input id="inputFeet" type="number" placeholder="Nhap Feet"
+               oninput="length1Converter(this.value)"
+               onchange="length1Converter(this.value)"><span id="outputFeet"></span></p>
+        <label>Feet <=> Meters</label>
+        <input id="inputMeters" type="number" placeholder="Nhap Meters"
+               oninput="length2Converter(this.value)"
+               onchange="length2Converter(this.value)"><span id="outputMeters"></span></p>
+
+        <!--placeholder: goi y , từ mà mình muốn hiển thị mờ mờ trong ô đó-->
+    </p>
+</form>
+<script>
+    meter = 0.305 * foot;
+    foot = 3.279 * meter;
+    function length1Converter(aaaa) {
+        let x = parseFloat(aaaa);
+        document.getElementById("inputMeters").value = 0.305 * x;
+    }
+    function length2Converter(bbbb) {
+        let y = parseFloat(bbbb);
+        document.getElementById("inputFeet").value = 3.279 * y;
+    }
+
+</script>
+</body>
+</html>
