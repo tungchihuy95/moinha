@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>Fahrenheit</label>
+        <input id="inputFahrenheit" type="number" placeholder="nhap Fahrenheit"
+               oninput="temperatureConverter1(this.value)"
+               onchange="temperatureConverter1(this.value)"><span id="outputFahrenheit"></span></p>
+    <label>Celsius</label>
+    <input id="inputCelsius" type="number" placeholder="nhap Celsius"
+           oninput="temperatureConverter2(this.value)"
+           onchange="temperatureConverter2(this.value)"><span id="outputCelsius"></span></p>
+
+    <!--placeholder: goi y , từ mà mình muốn hiển thị mờ mờ trong ô đó-->
+    </p>
+
+</form>
+<script>
+    Celsius = (Fahrenheit - 32)/1.8;
+    Fahrenheit = 1.8*Celsius + 32;
+    function temperatureConverter1(aaaa) {
+        let x = parseFloat(aaaa);
+
+        document.getElementById("inputCelsius").value = (x-32) / 1.8;
+    }
+    function temperatureConverter2(bbbb) {
+        let y = parseFloat(bbbb);
+        document.getElementById("inputFahrenheit").value = 1.8*y +32;
+    }
+    /* ParseFloat: Cụ thể, nếu chuỗi truyền vào được bắt đầu bằng số
+    nguyên hoặc một số thập phân, phương thức sẽ phân tích chuỗi và trả
+    về số đó như một số( thuộc kiểu number) chứ không phải một chuỗi như ban đầu -->
+     -Cho 'temperatureConverter'  tham so la (aaaa)
+     -> Gan x=parseFloat(aaaa) (chuyen doi tham so do thanh x, roi moi dung x de tinh toan OutputCelsius)*/
+</script>
+</body>
+</html>
